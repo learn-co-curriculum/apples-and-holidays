@@ -2,13 +2,15 @@
 
 ## Objectives
 
-Get comfortable interating over arrays and hashes. This lab is broken into two sections: apple picker and holiday supplies.
+Practice iterating over arrays and hashes. 
+
+*This lab contains two sections: Apple Picker and Holiday Supplies.*
 
 ## Apple Picker
 
 ### Instructions
 
-In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using `collect`, and the other using `select`.
+In `lib/apple.rb`, write two methods that will pick the apples out of the fruits array: one using `.collect` and the other using `.select`.
 
 ```ruby
 fruits = ["apple", "orange", "apple"]
@@ -16,15 +18,15 @@ fruits = ["apple", "orange", "apple"]
 apple_picker_with_select(fruits) #=> ["apple", "apple"]
 ```
 
-**Important:** Think about the difference between `select` and `collect`. Which one makes more sense to use? What do you think the benefits are of using one over the other, in this case?
+**Important:** Think about the difference between `.select` and `.collect`. Which one makes more sense to use? What do you think the benefits are of using one over the other, in this case?
 
-**Reminder:** You can `require 'pry'` on the top of your file and use binding.pry inside your methods. Then, when you run rspec, you'll be dropped right into the middle of the method. This will help you explore what is going one and understand how to get the tests passing. 
+**Reminder:** You can `require 'pry'` on the top of your file and use `binding.pry` inside your methods. Then, when you run RSpec with the `learn` command, you'll be dropped right into the middle of the method. This will help you to explore what is going on and better understand how to get the tests passing. 
 
 ## The Holiday Suppliers
 
 ### Instructions
 
-You have a bunch of decorations for various holidays organized by season.
+You have a bunch of decorations for various holidays organized by season:
 
 ```ruby
 holiday_supplies = {
@@ -44,23 +46,23 @@ holiday_supplies = {
 }
 ```
 
-Write your methods in `lib/holiday.rb`; use the comments in each method as guides.
+Write your methods in `lib/holiday.rb`. Use the comments in each method as guides.
 
-* Write a method that returns the second supply for the Fourth of July. For eg:
+* Write a method that returns the second supply for the Fourth of July, similar to this example that return the second supply for Christmas:
 
 ```ruby
-def second_supply_for_fourth_of_july(holiday_supplies)
-  holiday_supplies[:summer][:fourth_of_july][1]
+def second_supply_for_christmas(holiday_supplies)
+  holiday_supplies[:winter][:christmas][1]
 end
 ```
 
-* Write a method that adds a supply to a Winter holiday.
+* Write a method that adds a supply to the winter holidays.
 
 * Write a method that adds a supply to Memorial Day.
 
 * Write a method that adds a new holiday and its associated supplies to any season.
 
-* Write a method to collect all Winter supplies from all the winter holidays. For eg:
+* Write a method to collect all winter supplies from all the winter holidays. For example:
 
 ```bash
 winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
